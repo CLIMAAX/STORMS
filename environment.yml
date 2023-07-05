@@ -1,4 +1,4 @@
-name: climaax
+name: climaax_storms
 
 channels:
     - conda-forge
