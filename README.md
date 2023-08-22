@@ -1,4 +1,4 @@
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/CLIMAAX/STORMS/main?labpath=WIND_raster.ipynb)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/CLIMAAX/STORMS/main?labpath=WIND_raster_LUISA.ipynb)
 
 # STORMS
 
