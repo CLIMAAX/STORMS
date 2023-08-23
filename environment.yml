@@ -4,36 +4,34 @@ channels:
     - conda-forge
 
 dependencies:
-        - cartopy
-        - cfgrib
-        - contextily
-        - earthkit-data
-        - eccodes
-        - gdal
-        - geopandas
-        - ipympl
-        - ipywidgets
-        - jupyterlab
-        - leafmap
-        - matplotlib
-        - nbmake
-        - numpy
-        - osmnx
-        - pandas
-        - pip
-        - pyproj
-        - pytest
         - python=3.11
+        - gdal
+        - numpy
+        - geopandas
         - rasterio
-        - rioxarray
-        - scipy
+        - matplotlib
         - tqdm
-        - xarray
+        - pip
+        - jupyterlab
         - xlrd
+        - pyproj
+        - xarray
+        - rioxarray
+        - osmnx
+        - leafmap
+        - eccodes
+        - earthkit-data
+        - cfgrib
+        - scipy
+        - cartopy
+        - pandas
+        - ipywidgets
+        - ipympl
+        - nbmake
+        - pytest
         - pip:
-            - cdsapi
+            - netcdf4
             - damagescanner
             - jupyterlab_myst
-            - netcdf4
    
           
