@@ -1,5 +1,6 @@
 #Data directory
 **/data/
+**/STORM_event_raster/
 
 # results directory
 **/results/
