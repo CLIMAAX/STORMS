@@ -3,6 +3,8 @@ name: climaax_storms
 channels:
     - conda-forge
 
+# Package versions should follow the general CLIMAAX environment
+# specified in https://github.com/CLIMAAX/workflow_template
 dependencies:
     - cdsapi=0.7.0
     - contextily=1.6.0
