@@ -2,29 +2,36 @@
 
 ## Risk assessment methodology
 
-This event-based windstorm risk workflow can be used to see damages of a storm by combining hazard, exposure and vulnerability. The workflow is a simplified version of the work by [Koks & Haer (2020)](https://doi.org/10.1038/s41598-020-63580-w). Here the hazard is a map with the maximum 3-second wind gust of a storm. Exposure is determined by a map in which assets are associated with maximum damage that can occur per square meter of the asset and a certain exposure class is given to the asset. Vulnerability is defined as a collection of damage curves where the 3 second wind gusts are matched to a percentage of the asset that is damad
+This event-based windstorm risk workflow can be used to see damages of a storm by combining hazard, exposure and vulnerability. The workflow is a simplified version of the work by [Koks & Haer (2020)](https://doi.org/10.1038/s41598-020-63580-w). Here the hazard is represented by the map of the maximum 3-second wind gust during a storm. Exposure is expressed in terms of a map of assets and their maximum damage that can occur per square meter of the asset; each asset is assigned an exposure class. Vulnerability is defined as a collection of damage curves where the 3-second wind gusts are matched to a degree to which an asset would be damaged (in %).
 
- When overlaying the sets, all assets contain information on the type of asset class it is, the maximum damage that can occur at the asset, the vulnerability curve of the asset, and the windspeed at the asset location. With this information, one can do the damage calculation per asset. Step one is to inspect the vulnerability curve and how much of the asset is destroyed by the wind speed. This results in a fraction of the maximum damage value that occurs. Multiplying the maximum damage by the found damaged fraction results in the damage estimation of that asset. Doing this calculation for all asset locations in the region results in a map of the most affected locations.
+ By combining all datasets, it is possible to assign to each asset the following information:
+ - the type of asset (asset class)
+ - the maximum damage of the asset (in economic terms)
+ - the vulnerability curve of the asset (wind gust vs. relative damage)
+ - the windspeed at the asset location during the storm. 
+ 
+ With this information, one can do the damage calculation per asset. Based on the wind gust speed during the storm, the vulnerability curve is applied to determine to what extent is the asset damaged by this wind speed. Multiplying the maximum cost of the damage to this asset by the damage percentage results in the estimated damage by the storm to that asset. Performing this calculation for all asset locations in the region results in a damage map, that helps to determine locations that are most affected (have the highest costs of the damages).
 
 ## Datasets
 
 ### Hazard data
-Using the Copernicus Climate Data store, [historical storm footprints](https://doi.org/10.24381/cds.9b4ea013) can be retrieved. Next to that, [synthetic storms footprints](https://doi.org/10.24381/cds.ce973f02) can be found that are physically realistic and thus plausible storms. These synthetic storms can be useful to create a larger overview of possible events that can affect the area in current-day situations. Both datasets give the footprints of the maximum 3-second gust per 72 hours per grid cell.
+Using the Copernicus Climate Data store, [historical storm footprints](https://doi.org/10.24381/cds.9b4ea013) can be retrieved. Next to that, [synthetic storms footprints](https://doi.org/10.24381/cds.ce973f02) can be found that are physically realistic and are plausible representations of possible storms. These synthetic storms can be useful to create a larger overview of possible events that can affect the area in the current climate. Both datasets give the footprints of the maximum 3-second gust per 72 hours per grid cell.
 
 ### Exposure data
-An example dataset that can be used in this workflow is the [LUISA Land Cover data](https://data.jrc.ec.europa.eu/dataset/51858b51-8f27-4006-bf82-53eba35a142c).  With this dataset, the exposed asset is a 50x50m grid cell. Each land cover type is given a certain asset class that can be associated with the vulnerability curves.
+An example dataset that can be used in this workflow is the [LUISA Land Cover data](https://data.jrc.ec.europa.eu/dataset/51858b51-8f27-4006-bf82-53eba35a142c).  When using this dataset, we define an asset as a 50x50m grid cell with a given type of land use. Each land cover type is assigned a certain asset class that can be associated with the vulnerability curves.
 
-Each land cover type is also associated with a maximum damage per square meter. A first estimation of the maximum damages are based on [JRC maximum damage estimates](https://dx.doi.org/10.2760/16510) per country.
+Each land cover type is also assigned maximum damage value per square meter. A first estimation of the maximum damages are based on [JRC maximum damage estimates](https://dx.doi.org/10.2760/16510) per country. This data can be made more precise by using values corresponding to the local situation.
 
 ### Vulnerability data
-Each asset class from the exposure dataset is associated with a vulnerability curve. The vulnerability data consists of six curves determined by [Feuerstein et al. (2011)](https://doi.org/10.1016/j.atmosres.2010.12.026). The asset classes are differentiated by the type of building that are mainly present in the asset. These estimate damage curves can be found in the supplied material.
+Each asset class from the exposure dataset is associated with a vulnerability curve. The vulnerability data consists of six curves determined by [Feuerstein et al. (2011)](https://doi.org/10.1016/j.atmosres.2010.12.026). The asset classes are differentiated by the type of buildings that are mainly present in the asset. These estimate damage curves can be found in the supplied material (on GitHub).
 
 ## Output of the workflow
 
 The outputs of this workflow are:
- - Absolute and relative damage calculation for asset classes and spatially explicit maps.
+ - Absolute and relative damage calculation for different asset classes
+ - Spatially-explicit maps of damages (in economic terms)
 
-Flood damage is calculated by applying damage curves to the flood inundation depth maps, taking into account the local situation. For each grid point, the damage is calculated based on the windspeed, land use type, damage curves, and country-specific parameters (can be defined by the user using the provided excel sheet) that approximate the economic value of different land use types.
+Storm damage is calculated by combining the vulnerability (damage) curves and the wind gust maps. For each grid point, the damage is calculated based on the windspeed, land use type, damage curves, and economic information that approximate the economic value of different land use types (this is provided in a separate Excel sheet, where the GDP of the country needs to be adjusted).
 
 ## Contributors
 
