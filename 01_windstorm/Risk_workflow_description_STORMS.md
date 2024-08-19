@@ -1,7 +1,7 @@
 # Risk assessment for windstorm
 Windstorms can cause significant damage to buildings and infrastructure, especially when structures aren't strong enough to handle the powerful forces of the storm. This workflow is designed to help identify areas where windstorms could lead to high costs and severe damage.
 
-While projections suggest that the wind gust speed of future storms may not increase dramatically in Europe, their paths may shift northward [Seneviratne et al., 2023](https://doi.org/10.1017/9781009157896.013). As a result, this analysis does not include future projections for specific locations. Instead, regions can use historical storm data from both their own location and areas to the south to prepare for potential future storms. This approach helps regions anticipate and prepare for potential future storms, ensuring they are better equipped to handle the risks.
+While projections suggest that the wind gust speed of future storms may not increase dramatically in Europe, their paths may shift northward [(Seneviratne et al., 2023)](https://doi.org/10.1017/9781009157896.013). As a result, this analysis does not include future projections for specific locations. Instead, regions can use historical storm data from both their own location and areas to the south to prepare for potential future storms. This approach helps regions anticipate and prepare for potential future storms, ensuring they are better equipped to handle the risks.
 
 By applying this workflow, regions can better understand their vulnerabilities and take proactive steps to protect their communities and infrastructure.
 
