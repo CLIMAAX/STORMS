@@ -1,4 +1,9 @@
 # Risk assessment for windstorm
+Windstorms can cause significant damage to buildings and infrastructure, especially when structures aren't strong enough to handle the powerful forces of the storm. This workflow is designed to help identify areas where windstorms could lead to high costs and severe damage.
+
+While projections suggest that the wind gust speed of future storms may not increase dramatically in Europe, their paths may shift northward (Seneviratne et al., 2023)[https://doi.org/10.1017/9781009157896.013] As a result, this analysis does not include future projections for specific locations. Instead, regions can use historical storm data from both their own location and areas to the south to prepare for potential future storms. This approach helps regions anticipate and prepare for potential future storms, ensuring they are better equipped to handle the risks.
+
+By applying this workflow, regions can better understand their vulnerabilities and take proactive steps to protect their communities and infrastructure.
 
 ## Risk assessment methodology
 
@@ -49,4 +54,7 @@ Storm damage is calculated by combining the vulnerability (damage) curves and th
 - Feuerstein, B., Groenemeijer, P., Dirksen, E., Hubrig, M., Holzer, A. M., & Dotzek, N. (2011). Towards an improved wind speed scale and damage description adapted for Central Europe. Atmospheric Research, 100(4), 547-564. https://doi.org/10.1016/j.atmosres.2010.12.026
 
 - Pigaiani, C. and Batista E Silva, F., The LUISA Base Map 2018, EUR 30663 EN, Publications Office of the European Union, Luxembourg, 2021, ISBN 978-92-76-34207-6,  https://doi.org/10.2760/503006, JRC124621.
+
+- Seneviratne, S. I., Zhang, X., Adnan, M., Badi, W., Dereczynski, C., Luca, A. D., Ghosh, S., Iskandar, I., Kossin, J., Lewis, S., Otto, F., Pinto, I., Satoh, M., Vicente-Serrano, S. M., Wehner, M., & Zhou, B. (2023). Weather and Climate Extreme Events in a Changing Climate. In Climate Change 2021 – The Physical Science Basis: Working Group I Contribution to the Sixth Assessment Report of the Intergovernmental Panel on Climate Change (pp. 1513–1766). Cambridge University Press. https://doi.org/10.1017/9781009157896.013
+
 
