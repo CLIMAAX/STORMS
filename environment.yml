@@ -6,6 +6,7 @@ channels:
 # Package versions should follow the general CLIMAAX environment
 # specified in https://github.com/CLIMAAX/workflow_template
 dependencies:
+    - cartopy=0.23.0
     - cdsapi=0.7.0
     - contextily=1.6.0
     - dask=2024.7.0
