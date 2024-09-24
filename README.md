@@ -4,7 +4,7 @@ Repository for collaboration on workflows for wind hazard.
 
 [<img src="https://raw.githubusercontent.com/CLIMAAX/crabook/main/crabook/logo.png" height="100" />](https://climaax.eu)
 
-Part of the [Climate Risk Assessment handbook](https://handbook.climaax.eu/notebooks/workflows/storms.html).
+Part of the [Climate Risk Assessment Handbook](https://handbook.climaax.eu/notebooks/workflows/storms.html).
 
 
 ## How to run
