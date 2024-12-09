@@ -7,7 +7,7 @@ channels:
 # specified in https://github.com/CLIMAAX/workflow_template
 dependencies:
     - cartopy=0.23.0
-    - cdsapi=0.7.0
+    - cdsapi=0.7.5
     - contextily=1.6.0
     - dask=2024.7.0
     - geopandas=1.0.1
