@@ -2,6 +2,7 @@ name: climaax_storms
 
 channels:
     - conda-forge
+    - nodefaults
 
 # Package versions should follow the general CLIMAAX environment
 # specified in https://github.com/CLIMAAX/workflow_template
