@@ -21,7 +21,7 @@ In a terminal where git and conda are available:
 
 1.  Clone the repository
 
-        git clone git@github.com:CLIMAAX/STORMS.git
+        git clone https://github.com/CLIMAAX/STORMS.git
 
 2.  Move into the cloned repository
 
