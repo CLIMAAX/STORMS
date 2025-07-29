@@ -20,7 +20,20 @@ This event-based windstorm risk workflow can be used to see damages of a storm b
 ## Datasets
 
 ### Hazard data
-Using the Copernicus Climate Data store, [historical storm footprints](https://doi.org/10.24381/cds.9b4ea013) can be retrieved. Next to that, [synthetic storms footprints](https://doi.org/10.24381/cds.ce973f02) can be found that are physically realistic and are plausible representations of possible storms. These synthetic storms can be useful to create a larger overview of possible events that can affect the area in the current climate. Both datasets give the footprints of the maximum 3-second gust per 72 hours per grid cell.
+
+The Copernicus Climate Data Store offers a dataset of historical [windstorm footprints derived from reanalysis over Europe](https://doi.org/10.24381/bf1f06a9).
+These footprints consist of the maximum 10m wind gust over a 72-hour time window along an identified track of a storm event and are available on the original ERA5 grid (0.25° horizontal resolution) as well as a statistically-downscaled high-resolution grid (0.016° horizontal resolution) to better represent orographic and wind shear effects.
+
+:::{seealso}
+
+Other datasets on CDS that also offer storm footprints (maximum 3-second gust per 72 hours per grid cell):
+
+- [Winter windstorm indicators for Europe from 1979 to 2021 derived from reanalysis](https://doi.org/10.24381/cds.9b4ea013).
+- [Synthetic windstorm events for Europe from 1986 to 2011](https://doi.org/10.24381/cds.ce973f02):
+  physically realistic and thus plausible storms.
+  These synthetic storms can be useful to create a larger overview of possible events that can affect the area in current-day situations.
+:::
+
 
 ### Exposure data
 An example dataset that can be used in this workflow is the [LUISA Land Cover data](https://data.jrc.ec.europa.eu/dataset/51858b51-8f27-4006-bf82-53eba35a142c).  When using this dataset, we define an asset as a 50x50m grid cell with a given type of land use. Each land cover type is assigned a certain asset class that can be associated with the vulnerability curves.
@@ -38,25 +51,19 @@ The outputs of this workflow are:
 
 Storm damage is calculated by combining the vulnerability (damage) curves and the wind gust maps. For each grid point, the damage is calculated based on the windspeed, land use type, damage curves, and economic information that approximate the economic value of different land use types (this is provided in a separate Excel sheet, where the GDP of the country needs to be adjusted).
 
+
 ## Contributors
 
-**Authors**:
 - Ted Buskop (Deltares & Vrije Universiteit Amsterdam, IVM)
 
-**References**:
 
-- Koks, E.E., Haer., T. A high-resolution wind damage model for Europe. Sci Rep 10, 6866 (2020). https://doi.org/10.1038/s41598-020-63580-w
+## References
 
-- Copernicus Climate Change Service, Climate Data Store, (2022): Winter windstorm indicators for Europe from 1979 to 2021 derived from reanalysis. Copernicus Climate Change Service (C3S) Climate Data Store (CDS). DOI: 10.24381/cds.9b4ea013 (Accessed on DD-MMM-YYYY)
-
-- Copernicus Climate Change Service, Climate Data Store, (2022): Synthetic windstorm events for Europe from 1986 to 2011. Copernicus Climate Change Service (C3S) Climate Data Store (CDS). DOI: 10.24381/cds.ce973f02 (Accessed on DD-MMM-YYYY)
-
+- Koks, E.E., Haer., T. A high-resolution wind damage model for Europe. Sci Rep 10, 6866 (2020). DOI: [10.1038/s41598-020-63580-w](https://doi.org/10.1038/s41598-020-63580-w)
+- Copernicus Climate Change Service (2025): Windstorm tracks and footprints derived from reanalysis over Europe between 1940 to present. Copernicus Climate Change Service (C3S) Climate Data Store (CDS). DOI: [10.24381/bf1f06a9](https://doi.org/10.24381/bf1f06a9)
+- Copernicus Climate Change Service, Climate Data Store, (2022): Winter windstorm indicators for Europe from 1979 to 2021 derived from reanalysis. Copernicus Climate Change Service (C3S) Climate Data Store (CDS). DOI: [10.24381/cds.9b4ea013](https://doi.org/10.24381/cds.9b4ea013)
+- Copernicus Climate Change Service, Climate Data Store, (2022): Synthetic windstorm events for Europe from 1986 to 2011. Copernicus Climate Change Service (C3S) Climate Data Store (CDS). DOI: [10.24381/cds.ce973f02](https://doi.org/10.24381/cds.ce973f02)
 - Chang, E. K. M., Guo, Y., & Xia, X. (2012). CMIP5 multimodel ensemble projection of storm track change under global warming. Journal of Geophysical Research: Atmospheres, 117(D23). https://doi.org/10.1029/2012JD018578
-
 - Feuerstein, B., Groenemeijer, P., Dirksen, E., Hubrig, M., Holzer, A. M., & Dotzek, N. (2011). Towards an improved wind speed scale and damage description adapted for Central Europe. Atmospheric Research, 100(4), 547-564. https://doi.org/10.1016/j.atmosres.2010.12.026
-
 - Pigaiani, C. and Batista E Silva, F., The LUISA Base Map 2018, EUR 30663 EN, Publications Office of the European Union, Luxembourg, 2021, ISBN 978-92-76-34207-6,  https://doi.org/10.2760/503006, JRC124621.
-
 - Seneviratne, S. I., Zhang, X., Adnan, M., Badi, W., Dereczynski, C., Luca, A. D., Ghosh, S., Iskandar, I., Kossin, J., Lewis, S., Otto, F., Pinto, I., Satoh, M., Vicente-Serrano, S. M., Wehner, M., & Zhou, B. (2023). Weather and Climate Extreme Events in a Changing Climate. In Climate Change 2021 – The Physical Science Basis: Working Group I Contribution to the Sixth Assessment Report of the Intergovernmental Panel on Climate Change (pp. 1513–1766). Cambridge University Press. https://doi.org/10.1017/9781009157896.013
-
-
